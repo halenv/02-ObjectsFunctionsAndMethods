@@ -3,12 +3,12 @@ Practice DEFINING and CALLING
      FUNCTIONS
 
 Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Noelle Hale.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ###############################################################################
 #
-# TODO: 2.
+# DONE: 2.
 #   Allow this module to use the  rosegraphics.py  module by marking the
 #     src
 #   folder in this project as a "Sources Root", as follows:
@@ -32,9 +32,12 @@ def main():
     window = rg.TurtleWindow()
 
     turtle1()
+    turtle4()
     turtle3()
     turtle2()
     turtle2()
+    turtle5()
+
 
     window.close_on_mouse_click()
 
@@ -104,9 +107,45 @@ def turtle3():
     maja.end_fill()
 
 
+def turtle4():
+
+    dama = rg.SimpleTurtle()
+    dama.speed = 8
+
+    dama.pen = rg.Pen('lavender', 25)
+    dama.paint_bucket = rg.PaintBucket('light sea green')
+
+    dama.backward(250)
+    dama.begin_fill()
+    dama.draw_circle(50)
+    dama.end_fill()
+    dama.left(30)
+    dama.forward(50)
+
+
+def turtle5():
+
+    jojo = rg.SimpleTurtle()
+    jojo.speed = 4
+    jojo.pen = rg.Pen('olive drab', 12)
+
+    navy = rg.SimpleTurtle()
+    navy.speed = 10
+    navy.pen = rg.Pen('navy blue',3)
+
+    jojo.right(180)
+    jojo.forward(200)
+
+    jojo.draw_regular_polygon(7,70)
+    navy.draw_regular_polygon(5,42)
+
+
+
+
+
 ###############################################################################
 #
-# TODO: 3.
+# DONE: 3.
 #   READ the code above.  Be sure you understand:
 #     -- How many functions are defined above?
 #           (Answer: 4)
@@ -116,9 +155,9 @@ def turtle3():
 #     -- How many times does   main   call the   turtle1   function?
 #            (Answer: 1)
 #     -- How many times does   main   call the   turtle2   function?
-#            (Hint: the answer is NOT 1.)
+#            (Hint: the answer is NOT 1.) 2
 #     -- What line of code calls the   main   function?
-#            (Answer: look at the LAST line of this module, far below.)
+#            (Answer: look at the LAST line of this module, far below.) main
 #
 #     ** ASK QUESTIONS if you are uncertain about any of the answers. **
 #
@@ -138,7 +177,7 @@ def turtle3():
 
 ###############################################################################
 #
-# TODO: 4.
+# DONE: 4.
 #   Define another function,
 #   immediately below the end of the definition of   turtle3   above.
 #   Name your new function   turtle4.
@@ -168,7 +207,7 @@ def turtle3():
 
 ###############################################################################
 #
-# TODO: 5.
+# DONE: 5.
 #   Add a line to   main   that CALLS your new function immediately
 #   AFTER  main  calls turtle1.  So:
 #     -- the SimpleTurtle from turtle1 should move,
@@ -184,7 +223,7 @@ def turtle3():
 
 ###############################################################################
 #
-# TODO: 6.
+# DONE: 6.
 #   The previous two TODOs IMPLEMENTED a function (TO-DO 4)
 #   and TESTED that function (TO-DO 5).
 #
