@@ -16,6 +16,8 @@ def main():
     # Test your functions by putting calls to them here:
 
     two_circles()
+    circle_and_rectangle()
+    lines()
 
 
 def two_circles():
@@ -100,23 +102,32 @@ def circle_and_rectangle():
     center_x = center.x
     center_y = center.y
 
+    print("CIRCLE")
     print("circle outline thickness:", circle_outline)
     print("fill color:", circle_fill)
     print("center:", circle_center)
     print("center x-coordinate:", center_x)
     print("center y-coordinate:", center_y)
+    print()
 
     #start rectangle
-    r1 = rg.Point(425,50)
-    r2 = rg.Point(690,175)
+    r1 = rg.Point(422,50)
+    r2 = rg.Point(690,172)
     rectangle = rg.Rectangle(r1, r2)
     rectangle.attach_to(window)
 
     rect_outline = rectangle.outline_thickness
     rect_fill = rectangle.fill_color
-    rect_center = rect_cent_x, rect_cent_y
     rect_cent_x = (r1.x +r2.x)/2
     rect_cent_y = (r1.y +r2.y)/2
+
+    print("RECTANGLE")
+    print("rectangle outline thickness:", rect_outline)
+    print("fill color:", rect_fill)
+    print("center:", rect_cent_x, ",", rect_cent_y)
+    print("center x-coordinate:", rect_cent_x)
+    print("center y-coordinate:", rect_cent_y)
+    print()
 
     window.render()
 
@@ -124,7 +135,7 @@ def circle_and_rectangle():
 
     window.close_on_mouse_click()
     # -------------------------------------------------------------------------
-    # TODO: 3. Implement this function, per its doc-string above.
+    # DONE: 3. Implement this function, per its doc-string above.
     #   -- ANY objects that meet the criteria are fine.
     # Put a statement in   main   to test this function
     #    (by calling this function).
@@ -156,8 +167,36 @@ def lines():
 
     -- Waits for the user to press the mouse, then closes the window.
     """
+
+    window = rg.RoseWindow(700,500)
+
+    start1 = rg.Point(100, 50)
+    end1 = rg.Point(450,75)
+    line1 = rg.Line(start1, end1)
+    line1.color = 'turquoise1'
+    #print(line1.thickness) finding default thickness of line
+    line1.attach_to(window)
+
+    start2 = rg.Point(200, 100)
+    end2 = rg.Point(550, 320)
+    line2 = rg.Line(start2, end2)
+    line2.thickness = 15
+    midpoint2 = line2.get_midpoint()
+    midpoint2_x = midpoint2.x
+    midpoint2_y = midpoint2.y
+    line2.attach_to(window)
+
+    print("LINE2")
+    print("Midpoint:", midpoint2)
+    print("Midpoint x-coordinate:", midpoint2_x)
+    print("Midpoint y-coordinate:", midpoint2_y)
+
+    window.render()
+
+
+    window.close_on_mouse_click()
     # -------------------------------------------------------------------------
-    # TODO: 4. Implement and test this function.
+    # DONE: 4. Implement and test this function.
     # -------------------------------------------------------------------------
 
 
